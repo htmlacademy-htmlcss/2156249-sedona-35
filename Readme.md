@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Daria Egarmina](https://up.htmlacademy.ru/htmlcss/35/user/2156249).
-* Наставник: `Неизвестно`.
+* Наставник: `Александр Карташов` (https://htmlacademy.ru/profile/id77080).
 
 ---
 
