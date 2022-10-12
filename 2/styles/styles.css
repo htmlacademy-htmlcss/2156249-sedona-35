@@ -1,0 +1,334 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.button {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button__big {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.page-header {
+  background-color: #ffffff;
+}
+
+.navigation__list {
+  list-style-type: none;
+}
+
+.navigation__link {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+}
+
+.welcoming {
+  width: 1200px;
+  height: 485px;
+  margin: 0 auto;
+
+  background-image: url("../images/main_index/welcome_divider_main.svg"), url("../images/main_index/welcome-background_main.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center bottom, center;
+  background-color: #808080;
+
+  color: #ffffff;
+}
+
+/* Рекоммендации */
+
+.advantages {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.advantages__slogan {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages__text {
+  color: #333333;
+  text-align: center;
+}
+
+.advantages__list {
+  list-style-type: none;
+}
+
+.advantages__item {
+  color: #333333;
+
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+
+  background-color: #82B3D3;
+}
+
+.advantages__title {
+  color: #ffffff;
+
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.advantages__description {
+  color: #ffffff;
+}
+
+.advantages__extra-list {
+  list-style-type: none;
+}
+
+.advantages__extra-item {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages__extra-item:nth-child(2) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages__extra-title {
+  color: #000000;
+
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.recommendations__list {
+  list-style-type: none;
+}
+
+.recommendations__item {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.recommendations__item:nth-child(2) {
+  background-color: #ffffff;
+}
+
+.recommendations__title {
+  color: #000000;
+
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Заинтересовались? Поиск гостиницы */
+
+.accomodation {
+  color: #333333;
+  text-align: center;
+
+  background-color: #ffffff;
+}
+
+.accomodation__title {
+  color:#000000;
+
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Подписка на рассылку */
+
+.subscription {
+  /* width: 1200px; */
+  height: 415px;
+
+  color: #ffffff;
+  text-align: center;
+
+  background-color: #808080;
+  background-image: url("../images/main_index/subscribe_banner_main.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.subscription__title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Подвал сайта */
+
+.page-footer {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.social__list {
+  list-style-type: none;
+}
+
+.contacts__phone {
+  font-size: 40px;
+  line-height: 40px;
+
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Страница каталога */
+
+.main-inner {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* Гостиницы Седоны */
+
+.catalog-decoration {
+  color: #ffffff;
+  background-color: #808080;
+  text-align: left;
+
+  background-image: url("../images/catalog/catalog_background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.inner-header__title {
+  font-size: 80px;
+  line-height: 78px;
+  font-weight: 700;
+}
+
+.breadcrumbs {
+  list-style-type: none;
+}
+
+.breadcrumbs__link {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+}
+
+.filter__title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.filter__list {
+  list-style-type: none;
+}
+
+.filter__item {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.search-result__title,
+.search-result__number {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.view-type_list {
+  list-style-type: none;
+}
+
+.catalog-list {
+  list-style-type: none;
+}
+
+.card__link {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card__type {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  text-align: left;
+  color: #333333
+}
+
+.card__price {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  text-align: right;
+  color: #333333
+}
+
+.card__rating {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.subscription__catalog {
+  /* width: 1200px; */
+  height: 415px;
+
+  color: #000000;
+  text-align: center;
+
+  background-color: #ffffff;
+}
+
+.subscription__description__catalog {
+  color:#333333
+}
