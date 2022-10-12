@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
       <a class="logo__link" href="index.html">
-        <img class="logo" src="#" alt="Логотип городка Седона">
+        <img class="logo" src="images/header/sedona-logo_header.svg" width="140" height="70" alt="Логотип городка Седона">
       </a>
       <nav class="navigation">
         <ul class="navigation__list">
@@ -46,7 +47,9 @@
     </header>
 
     <main class="main-inner">
-      <header class="inner-header">
+
+    <div class="catalog-decoration">
+      <section class="inner-header">
         <h1 class="inner-header__title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
           <li class="breadcrumbs__item">
@@ -62,7 +65,7 @@
             </a>
           </li>
         </ul>
-      </header>
+      </section>
 
       <section class="accomodation-catalog filter">
         <h2 class="visually-hidden">Фильтры для поиска гостиницы в Седоне</h2>
@@ -128,6 +131,7 @@
           <button class="button filter__reset-button" type="reset">Сбросить</button>
         </form>
       </section>
+    </div>
 
       <section class="search-result">
         <h2 class="search-result__title">Найдено гостинец:</h2>
@@ -161,7 +165,7 @@
         <ul class="catalog-list">
           <li class="catalog-list__card card">
             <a class="card__link" href="#">
-              <img class="card__image" src="#" alt="Пещера, из которой видно звёздное небо">
+              <img class="card__image" src="images/catalog/hotel-card_amara.jpg" width="300" height="212" alt="Пещера, из которой видно звёздное небо">
             </a>
             <a class="card__link" href="#">
              <h3 class="card__title">Amara Resort & Spa</h3>
@@ -175,7 +179,7 @@
           </li>
           <li class="catalog-list__card card">
             <a class="card__link" href="#">
-              <img class="card__image" src="#" alt="Вид на освещённые солнцем горы, грозовые облака и радугу">
+              <img class="card__image" src="images/catalog/hotel-card_villas.jpg" width="300" height="212" alt="Вид на освещённые солнцем горы, грозовые облака и радугу">
             </a>
             <a class="card__link" href="#">
               <h3 class="card__title">Villas at Poco Diablo</h3>
@@ -189,7 +193,7 @@
           </li>
           <li class="catalog-list__card card">
             <a class="card__link" href="#">
-              <img class="card__image" src="#" alt="Вид на горы и голубое небо">
+              <img class="card__image" src="images/catalog/hotel-card_desert.jpg" width="300" height="212" alt="Вид на горы и голубое небо">
             </a>
             <a class="card__link" href="#">
               <h3 class="card__title">Desert Quail Inn</h3>
@@ -203,7 +207,7 @@
           </li>
           <li class="catalog-list__card card">
             <a class="card__link" href="#">
-              <img class="card__image" src="#" alt="Вид на горы и звёздное небо">
+              <img class="card__image" src="images/catalog/hotel-card_greentree.jpg" width="300" height="212" alt="Вид на горы и звёздное небо">
             </a>
             <a class="card__link" href="#">
               <h3 class="card__title">GreenTree Inn</h3>
@@ -241,12 +245,12 @@
         </ul>
       </section>
 
-      <section class="subscription">
+      <section class="subscription__catalog">
         <h2 class="subscription__title">Подпишитесь на рассылку</h2>
-        <p class="subscription__description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <p class="subscription__description subscription__description__catalog">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="post">
           <input class="subscription__field" placeholder="Ваш email" type="email" name="subscription-email" required>
-          <button class="button subscription__button" type="submit">Подписаться</button>
+          <button class="button button__big subscription__button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
@@ -287,7 +291,7 @@
       <section class="copyright">
         <h2 class="visually-hidden">Разработчик сайта</h2>
         <a class="copyright__link" href="https://htmlacademy.ru/">
-          <img class="copyright__logo" src="#" alt="Логотип компании HtmlAcademy">
+          <img class="copyright__logo" src="images/footer/html-academy-logo_footer.svg" width="115" height="33" alt="Логотип компании HtmlAcademy">
         </a>
       </section>
     </footer>
