@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
+  <div class="container">
     <header class="page-header">
       <a class="logo__link">
         <img class="logo" src="images/header/sedona-logo_header.svg" width="140" height="70" alt="Логотип городка Седона">
@@ -38,7 +39,7 @@
             </a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="#">
+            <a class="navigation__link button button__link" href="#">
               Хочу сюда!
             </a>
           </li>
@@ -46,7 +47,7 @@
       </nav>
     </header>
 
-    <main class="main-index">
+    <main class="main-index container__main">
       <h1 class="visually-hidden">Туристический городок Седона</h1>
 
       <section class="welcoming">
@@ -62,8 +63,10 @@
 
         <ul class="advantages__list">
           <li class="advantages__item">
+          <div class="advantages__real-town__wrapper">
             <h3 class="advantages__title">Настоящий городок</h3>
             <p class="advantages__description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+          </div>
             <img class="advantages__image" src="images/main_index/sedona-veiw_1_main.jpg" width="800" height="384" alt="Красочный вид на уютные дома Седоны">
             <ul class="advantages__extra-list">
               <li class="advantages__extra-item">
@@ -81,8 +84,10 @@
             </ul>
           </li>
           <li class="advantages__item">
+          <div class="advantages__devils-bridge__wrapper">
             <h3 class="advantages__title">Там есть мост дьявола</h3>
             <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+          </div>
             <img class="advantages__image" src="images/main_index/sedona-view_2_main.jpg" width="800" height="384" alt="Красочный вид на терракотовые скалы">
             <ul class="recommendations__list">
               <li class="recommendations__item">
@@ -108,7 +113,7 @@
       <section class="accomodation">
         <h2 class="accomodation__title">Заинтересовались?</h2>
         <p class="accomodation__description">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a class="button button__big accomodation__search" href="#">Поиск гостиницы в Седоне</a>
+        <a class="button button__big__brown accomodation__search" href="#">Поиск гостиницы в Седоне</a>
       </section>
 
       <section class="subscription">
@@ -116,12 +121,13 @@
         <p class="subscription__description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="post">
           <input class="subscription__field" placeholder="Ваш email" type="email" name="subscription-email" required>
-          <button class="button button__big subscription__button" type="submit">Подписаться</button>
+          <button class="button button__big__blue subscription__button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
 
     <footer class="page-footer">
+    <div class="container__page-footer">
       <section class="social">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social__list">
@@ -160,6 +166,8 @@
           <img class="copyright__logo" src="images/footer/html-academy-logo_footer.svg" width="115" height="33" alt="Логотип компании HtmlAcademy">
         </a>
       </section>
+    </div>
     </footer>
+  </div>
   </body>
 </html>
