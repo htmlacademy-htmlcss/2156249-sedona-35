@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
+  <div class="container">
     <header class="page-header">
       <a class="logo__link" href="index.html">
         <img class="logo" src="images/header/sedona-logo_header.svg" width="140" height="70" alt="Логотип городка Седона">
@@ -38,7 +39,7 @@
             </a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="#">
+            <a class="navigation__link button button__link" href="#">
               Хочу сюда!
             </a>
           </li>
@@ -46,7 +47,7 @@
       </nav>
     </header>
 
-    <main class="main-inner">
+    <main class="main-inner container__main">
 
     <div class="catalog-decoration">
       <section class="inner-header">
@@ -68,7 +69,8 @@
       </section>
 
       <section class="accomodation-catalog filter">
-        <h2 class="visually-hidden">Фильтры для поиска гостиницы в Седоне</h2>
+        <h2 class="visually-hidden" hidden>Фильтры для поиска гостиницы в Седоне</h2>
+
         <form class="filter__form" action="https://echo.htmlacademy.ru/" method="get">
 
           <fieldset class="filter__group">
@@ -119,7 +121,7 @@
             </ul>
           </fieldset>
 
-          <fieldset class="filter__group">
+          <fieldset class="filter__group filter__group__price">
             <legend class="filter__title">Стоимость, &#x20bd:</legend>
             <input class="price" type="number" min="0" max="9000" step="500" value="0" placeholder="от">
             <input class="price" type="number" min="0" max="9000" step="500" value="9000" placeholder="до">
@@ -127,16 +129,19 @@
             <input class="price" type="range" min="0" max="9000" step="500">
           </fieldset>
 
-          <button class="button filter__submit-button" type="submit">Применить</button>
-          <button class="button filter__reset-button" type="reset">Сбросить</button>
+          <div class="filter__button-wrapper">
+          <button class="button button__small__blue filter__submit-button" type="submit">Применить</button>
+          <button class="button button__small__transparent filter__reset-button" type="reset">Сбросить</button>
+         </div>
         </form>
       </section>
     </div>
 
       <section class="search-result">
+        <div class="search-result__wrapper">
         <h2 class="search-result__title">Найдено гостинец:</h2>
         <span class="search-result__number">38</span>
-        <br>
+        </div>
 
         <select class="select-control" aria-label="Сортировка">
           <option value="cheap">Сначала дешёвые</option>
@@ -161,7 +166,9 @@
             </a>
           </li>
         </ul>
+      </section>
 
+      <div class="catalog-list__container">
         <ul class="catalog-list">
           <li class="catalog-list__card card">
             <a class="card__link" href="#">
@@ -173,7 +180,7 @@
             <span class="card__type">Гостиница</span>
             <b class="card__price">От 4000 &#x20bd</b>
             <a class="button card__button" href="#">Подробнее</a>
-            <button class="button card__button" type="button">В избранное</button>
+            <button class="button button__small__blue card__button" type="button">В избранное</button>
             <p class="card__stars five-stars"><span class="visually-hidden">Пять звёзд</span></p>
             <p class="card__rating">Рейтинг: 8,5</p>
           </li>
@@ -201,7 +208,7 @@
             <span class="card__type">Гостиница</span>
             <b class="card__price">От 2500 &#x20bd</b>
             <a class="button card__button" href="#">Подробнее</a>
-            <button class="button card__button" type="button">В избранное</button>
+            <button class="button button__small__blue card__button" type="button">В избранное</button>
             <p class="card__stars three-stars"><span class="visually-hidden">Три звезды</span></p>
             <p class="card__rating">Рейтинг: 6,9</p>
           </li>
@@ -215,12 +222,14 @@
             <span class="card__type">Гостиница</span>
             <b class="card__price">От 1500 &#x20bd</b>
             <a class="button card__button" href="#">Подробнее</a>
-            <button class="button card__button" type="button">В избранное</button>
+            <button class="button button__small__blue card__button" type="button">В избранное</button>
             <p class="card__stars two-stars"><span class="visually-hidden">Две звезды</span></p>
             <p class="card__rating">Рейтинг: 5,0</p>
           </li>
         </ul>
+      </div>
 
+      <div class="pagination__container">
         <ul class="pagination">
           <li class="pagination__item">
             <a class="pagination__link pagination__current">1</a>
@@ -236,26 +245,27 @@
           </li>
           <li class="pagination__item">
             <a class="pagination__link pagination__next-page" href="#">...
-              <span class="visually-hidden">Показать следующую страницу</span>
+              <span class="visually-hidden" hidden>Показать следующую страницу</span>
             </a>
           </li>
           <li class="pagination__item">
             <a class="pagination__link" href="#">10</a>
           </li>
         </ul>
-      </section>
+      </div>
 
-      <section class="subscription__catalog">
+      <section class="subscription subscription__catalog">
         <h2 class="subscription__title">Подпишитесь на рассылку</h2>
         <p class="subscription__description subscription__description__catalog">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="post">
           <input class="subscription__field" placeholder="Ваш email" type="email" name="subscription-email" required>
-          <button class="button button__big subscription__button" type="submit">Подписаться</button>
+          <button class="button button__big__blue subscription__button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
 
     <footer class="page-footer">
+    <div class="container__page-footer">
       <section class="social">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social__list">
@@ -294,6 +304,8 @@
           <img class="copyright__logo" src="images/footer/html-academy-logo_footer.svg" width="115" height="33" alt="Логотип компании HtmlAcademy">
         </a>
       </section>
+    </div>
     </footer>
+  </div>
   </body>
 </html>
