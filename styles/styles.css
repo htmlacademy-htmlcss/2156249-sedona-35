@@ -14,7 +14,12 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 22px;
@@ -30,22 +35,70 @@ body {
   font-weight: 700;
   text-align: center;
   color: #ffffff;
-  background-color: #000000;
+  background-color: #756157;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-.button__big {
+.button__big__blue {
   font-size: 20px;
   line-height: 36px;
+  background-color: #82B3D3;
 }
+
+.button__big__brown {
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #756157;
+}
+
+.button__small__blue {
+  background-color: #82B3D3;
+}
+
+.button__small__transparent {
+  background-color: transparent;
+}
+
+.card__button__current {
+  background-color: #7DB54F;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.container__main {
+  flex-grow: 1;
+}
+
+/* Шапка сайта */
 
 .page-header {
   background-color: #ffffff;
 }
 
+.navigation {
+  display: flex;
+  width: 1200px;
+}
+
 .navigation__list {
   list-style-type: none;
+
+  margin: 0;
+  padding: 0;
+  width: 450px;
+}
+
+.navigation__user {
+  max-width: 270px;
+  margin-left: auto;
+  margin-right: 70px;
 }
 
 .navigation__link {
@@ -53,14 +106,21 @@ body {
   line-height: 24px;
   font-weight: 700;
   text-align: left;
-  color: inherit;
+  /* color: inherit; */
+  color:#000000;
   text-decoration: none;
 }
+
+.button__link {
+  color: #ffffff;
+}
+
+/* Hero-block - Раздел с приветствием */
 
 .welcoming {
   width: 1200px;
   height: 485px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 
   background-image: url("../images/main_index/welcome_divider_main.svg"), url("../images/main_index/welcome-background_main.jpg");
   background-repeat: no-repeat, no-repeat;
@@ -68,6 +128,11 @@ body {
   background-color: #808080;
 
   color: #ffffff;
+}
+
+.welcoming__image {
+  display: block;
+  margin: 0 auto;
 }
 
 /* Рекоммендации */
@@ -90,8 +155,13 @@ body {
   text-align: center;
 }
 
+/* Основной список рекомендаций: настоящий городок, там есть мост дьявола  */
+
 .advantages__list {
   list-style-type: none;
+
+  margin: 0;
+  padding: 0;
 }
 
 .advantages__item {
@@ -102,6 +172,19 @@ body {
   text-align: center;
 
   background-color: #82B3D3;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages__real-town__wrapper {
+  width: 400px;
+  height: 384px;
+}
+
+.advantages__devils-bridge__wrapper {
+  width: 400px;
+  height: 384px;
 }
 
 .advantages__title {
@@ -117,12 +200,23 @@ body {
   color: #ffffff;
 }
 
+/* Дополнительный список: небольшая площадь, красивая дорога, мало туристов */
+
 .advantages__extra-list {
   list-style-type: none;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  /* justify-content: space-between; */
 }
 
 .advantages__extra-item {
   background-color: rgba(131, 179, 211, 0.12);
+
+  width: 400px;
+  height: 384px;
 }
 
 .advantages__extra-item:nth-child(2) {
@@ -138,12 +232,23 @@ body {
   text-transform: uppercase;
 }
 
+/* Дополнительный список: жильё, еда, сувениры */
+
 .recommendations__list {
   list-style-type: none;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  /* justify-content: space-between; */
 }
 
 .recommendations__item {
   background-color: rgba(131, 179, 211, 0.12);
+
+  width: 400px;
+  height: 384px;
 }
 
 .recommendations__item:nth-child(2) {
@@ -206,6 +311,18 @@ body {
   background-color: #ffffff;
 }
 
+.container__page-footer {
+  width: 1060px;
+  margin: 0 auto;
+
+  display: flex;
+}
+
+.social {
+  width: 142px;
+  margin-right: 42px;
+}
+
 .social__list {
   list-style-type: none;
 }
@@ -216,6 +333,11 @@ body {
 
   color: #000000;
   text-decoration: none;
+}
+
+.copyright {
+  width: 115px;
+  margin-left: auto;
 }
 
 /* Страница каталога */
@@ -237,14 +359,26 @@ body {
   background-size: cover;
 }
 
+.inner-header {
+  width: 1060px;
+  margin: 0 auto;
+}
+
 .inner-header__title {
   font-size: 80px;
   line-height: 78px;
   font-weight: 700;
 }
 
+/* Хлебные крошки */
+
 .breadcrumbs {
   list-style-type: none;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
 }
 
 .breadcrumbs__link {
@@ -253,6 +387,27 @@ body {
   font-weight: 400;
   text-decoration: none;
   color: inherit;
+}
+
+/* Фильтры для поиска гостиницы в Седоне */
+
+.filter__form {
+  width: 1060px;
+  margin: 0 auto;
+
+  display: flex;
+}
+
+.filter__group {
+  width: 151px;
+  margin-left: 0;
+  margin-right: 70px;
+}
+
+.filter__group__price {
+  width: 288px;
+  margin-left: 0;
+  margin-right: 70px;
 }
 
 .filter__title {
@@ -270,6 +425,20 @@ body {
   line-height: 23px;
 }
 
+.filter__button-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Результаты поиска */
+
+.search-result {
+  width: 1060px;
+  margin: 0 auto;
+
+  display: flex;
+}
+
 .search-result__title,
 .search-result__number {
   font-size: 30px;
@@ -278,12 +447,38 @@ body {
   text-transform: uppercase;
 }
 
+/* Способ отображения */
+
 .view-type_list {
   list-style-type: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* Каталог с карточками гостиниц */
+
+.catalog-list__container {
+  width: 1060px;
+  margin: 0 auto;
 }
 
 .catalog-list {
   list-style-type: none;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.catalog-list__card {
+  display: flex;
+  flex-direction: column;
+
+  width: 340px;
 }
 
 .card__link {
@@ -319,6 +514,50 @@ body {
   color: #333333;
 }
 
+/* Пагинация */
+
+.pagination__container {
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.pagination{
+  list-style-type: none;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+}
+
+.pagination__item {
+  width: 60px;
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+.pagination__link {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #82B3D3;
+  text-decoration: none;
+}
+
+.pagination__current {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.pagination__next-page {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* Подписка в каталоге */
+
 .subscription__catalog {
   /* width: 1200px; */
   height: 415px;
@@ -327,6 +566,7 @@ body {
   text-align: center;
 
   background-color: #ffffff;
+  background-image: none;
 }
 
 .subscription__description__catalog {
