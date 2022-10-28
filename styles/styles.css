@@ -52,30 +52,62 @@ body {
   background-color: #756157;
   text-decoration: none;
   text-transform: uppercase;
+
+  margin: 0;
+
+  border: none;
+  cursor: pointer;
+
+  border-radius: 4px;
+
+  display: inline-block;
 }
 
 .button__big__blue {
   font-size: 20px;
   line-height: 36px;
   background-color: #82B3D3;
+
+  padding: 8px 50px;
+  border-radius: 0 4px 4px 0;
 }
 
 .button__big__brown {
   font-size: 20px;
   line-height: 36px;
   background-color: #756157;
+
+  padding: 8px 50px;
+
+  /* display: inline-block; */
 }
 
 .button__small__blue {
   background-color: #82B3D3;
+
+  padding: 8px 50px;
 }
 
 .button__small__transparent {
   background-color: transparent;
+
+  padding: 8px 58px;
+}
+
+.card__button {
+  padding: 8px 26px;
+}
+
+.card__button__blue {
+  background-color: #82B3D3;
+
+  padding: 8px 20px;
 }
 
 .card__button__current {
   background-color: #7DB54F;
+
+  padding: 8px 18px;
 }
 
 /* Основные контейнеры */
@@ -125,7 +157,6 @@ body {
 }
 
 .navigation__user {
-  max-width: 270px;
   margin-left: auto;
 }
 
@@ -139,18 +170,40 @@ body {
 
   display: block;
   padding: 20px 16px;
+
+  position: relative;
 }
+
+.navigation__user .navigation__item {
+  align-self: center;
+}
+
+/* Как иначе адекватно отцентрировать иконки? Что у меня сделано не так? */
 
 .navigation__user .navigation__link {
   min-width: 44px;
-  min-height: 64px;
 
-  padding: 0;
-  margin: 0;
+  padding: 22px 12px;
+  box-sizing: border-box;
 }
 
-.button__link {
+.navigation__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.navigation__link.button__link {
   color: #ffffff;
+
+  display: inline-block;
+  padding: 8px 34px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  margin-left: 20px;
 }
 
 /* Главная часть - main */
@@ -414,7 +467,7 @@ body {
 }
 
 .social {
-  width: 142px;
+  max-width: 145px;
 }
 
 .social__list {
@@ -431,8 +484,23 @@ body {
   min-width: 48px;
   min-height: 40px;
 
-  padding: 0;
-  margin: 0;
+  display: block;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px 15px;
+}
+
+.social__link__vk {
+  background-image: url("../images/footer/vk-icon_footer.svg");
+}
+
+.social__link__tme {
+  background-image: url("../images/footer/telegram-icon_footer.svg");
+}
+
+.social__link__youtube {
+  background-image: url("../images/footer/youtube-icon_footer.svg");
 }
 
 .contacts {
