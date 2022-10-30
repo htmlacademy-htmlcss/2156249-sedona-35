@@ -27,6 +27,7 @@
         <ul class="navigation__list navigation__user">
           <li class="navigation__item">
             <a class="navigation__link" href="#">
+              <svg class="navigation__icon" aria-hidden="true" focusable="false" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m19.5 18-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87a8 8 0 0 0-8-7.96c-4.4 0-8 3.68-8 8.06a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z" fill="#000"/></svg>
               <span class="visually-hidden">
               Поиск
               </span>
@@ -34,6 +35,7 @@
           </li>
           <li class="navigation__item">
             <a class="navigation__link" href="#">
+              <svg class="navigation__icon" aria-hidden="true" focusable="false" width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.9 17a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9A5.4 5.4 0 0 1 5.5 0C6.8 0 8 .5 9 1.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z" fill="#000"/></svg>
               <span class="visually-hidden">
                 Избранное
               </span>
@@ -58,13 +60,14 @@
 
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества городка Седоны</h2>
+        <div class="advantages__wrapper">
         <p class="advantages__slogan">Седона — небольшой городок в Аризоне, <br>
           заслуживающий большего!</p>
         <p class="advantages__text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
-
+        </div>
         <ul class="advantages__list">
           <li class="advantages__item">
-          <div class="advantages__real-town__wrapper">
+          <div class="advantages__content-wrapper advantages__content-wrapper-blue">
             <h3 class="advantages__title">Настоящий городок</h3>
             <p class="advantages__description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
@@ -75,17 +78,17 @@
                 <p class="advantages__extra-description">Все достопримечательности <br> находятся очень близко</p>
               </li>
               <li class="advantages__extra-item">
-                <h3 class="advantages__extra-title">Красивая дорога</h3>
-                <p class="advantages__extra-description">Ехать в Седону из Лас-Вегаса <br> совсем не скучно!</p>
+                <h3 class="advantages__extra-title">Красивая<br>дорога</h3>
+                <p class="advantages__extra-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </li>
               <li class="advantages__extra-item">
-                <h3 class="advantages__extra-title">Мало туристов</h3>
+                <h3 class="advantages__extra-title">Мало<br>туристов</h3>
                 <p class="advantages__extra-description">Большинство едет в Гранд <br> Каньон и толпится там</p>
               </li>
             </ul>
           </li>
           <li class="advantages__item">
-          <div class="advantages__devils-bridge__wrapper">
+          <div class="advantages__content-wrapper advantages__content-wrapper-blue">
             <h3 class="advantages__title">Там есть <br> мост дьявола</h3>
             <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
           </div>
@@ -128,26 +131,25 @@
     </main>
 
     <footer class="page-footer">
-    <div class="container__page-footer">
       <section class="social">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link button" href="https://vk.com/htmlacademy">
+            <a class="social__link social__link__vk" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">
                 Вконтакте
               </span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link button" href="https://t.me/htmlacademy ">
+            <a class="social__link social__link__tme" href="https://t.me/htmlacademy ">
               <span class="visually-hidden">
                 Телеграмм
               </span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link button" href="https://www.youtube.com/user/htmlacademyru">
+            <a class="social__link social__link__youtube" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">
                 YouTube
               </span>
@@ -167,7 +169,6 @@
           <img class="copyright__logo" src="images/footer/html-academy-logo_footer.svg" width="115" height="33" alt="Логотип компании HtmlAcademy">
         </a>
       </section>
-    </div>
     </footer>
   </div>
   </body>
