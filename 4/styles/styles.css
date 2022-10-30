@@ -174,14 +174,25 @@ body {
   position: relative;
 }
 
-.navigation__user .navigation__item {
+/* Был вопрос: как правильно отцентровать иконки. Сначала сделала так.
+Но мне не понравилось, так как область нажатия была неполной. */
+
+/* .navigation__user .navigation__item {
   align-self: center;
-}
+} */
 
-/* Как иначе адекватно отцентрировать иконки? Что у меня сделано не так? */
-
-.navigation__user .navigation__link {
+/* .navigation__user .navigation__link {
   min-width: 44px;
+
+  padding: 22px 12px;
+  box-sizing: border-box;
+} */
+
+/* Потом переделала на такой вариант: */
+
+.navigation__user .navigation__link__icon {
+  min-width: 44px;
+  height: 100%;
 
   padding: 22px 12px;
   box-sizing: border-box;
@@ -574,11 +585,31 @@ body {
   color: inherit;
 }
 
-.homepage-icon {
+.homepage-icon__link {
   min-width: 12px;
   min-height: 12px;
 
-  margin-right: 29px;
+  margin-right: 23px;
+
+  position: relative;
+}
+
+.homepage-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -2px;
+  left: 0;
+  margin: auto;
+}
+
+.catalog__link {
+  padding-left: 18px;
+
+  background-image: url("../images/catalog/arrow-icon_breadcrumbs.svg");
+  background-repeat: no-repeat;
+  background-size: 8px 20px;
+  background-position: left 100%;
 }
 
 /* Фильтры для поиска гостиницы в Седоне */
@@ -702,7 +733,7 @@ input.price {
   margin-right: 70px;
 }
 
-.view-type_list {
+.view-type__list {
   list-style-type: none;
 
   width: 160px;
@@ -713,10 +744,10 @@ input.price {
   justify-content: space-between;
 }
 
-.view-type_link {
+/* .view-type__link {
   min-width: 48px;
   min-height: 48px;
-}
+} */
 
 /* Каталог с карточками гостиниц */
 
@@ -795,6 +826,14 @@ input.price {
   color: #333333;
 }
 
+.card__stars {
+  background-image: url("../images/catalog/star-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 18px 17px;
+  background-position: left;
+}
+/* Почему не отображается звёздочка? */
+
 .card__rating {
   font-size: 16px;
   line-height: 20px;
@@ -804,6 +843,10 @@ input.price {
   color: #333333;
 
   margin: 0;
+
+  padding: 9px 22px 8px 23px;
+  border-radius: 4px;
+  background-color: #F2F2F2;
 }
 
 /* Пагинация */
@@ -825,6 +868,8 @@ input.price {
 
   color: #ffffff;
   background-color: #82B3D3;
+
+  border-radius: 4px;
 
   display: flex;
   justify-content: center;
