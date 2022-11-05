@@ -63,15 +63,6 @@ body {
   display: inline-block;
 }
 
-.button__big__blue {
-  font-size: 20px;
-  line-height: 36px;
-  background-color: #82B3D3;
-
-  padding: 8px 50px;
-  border-radius: 0 4px 4px 0;
-}
-
 .button__big__brown {
   font-size: 20px;
   line-height: 36px;
@@ -82,10 +73,68 @@ body {
   /* display: inline-block; */
 }
 
+.button__big__brown:hover {
+  background-color: #615048;
+}
+
+.button__big__brown:focus {
+  background-color: #615048;
+}
+
+.button__big__brown:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button__big__brown:disabled {
+  background-color: #E5E5E5;
+  color: #FFFFFF;
+}
+
+.button__big__blue {
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #82B3D3;
+
+  padding: 8px 50px;
+  border-radius: 0 4px 4px 0;
+}
+
+.button__big__blue:hover {
+  background-color: #68A2CA;
+}
+
+.button__big__blue:focus {
+  background-color: #68A2CA;
+}
+
+.button__big__blue:active {
+  background-color: #68A2CA;
+  color:  rgba(255, 255, 255, 0.3);
+}
+
 .button__small__blue {
   background-color: #82B3D3;
 
   padding: 8px 50px;
+}
+
+.button__small__blue:hover {
+  background-color: #68A2CA;
+}
+
+.button__small__blue:focus {
+  background-color: #68A2CA;
+}
+
+.button__small__blue:active {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button__small__blue:disabled {
+  background-color: #E5E5E5;
+  color: #FFFFFF;
 }
 
 .button__small__transparent {
@@ -94,8 +143,47 @@ body {
   padding: 8px 58px;
 }
 
+.button__small__transparent:hover {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.button__small__transparent:focus {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 3px solid #83B3D3;
+}
+
+.button__small__transparent:active {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button__small__transparent:disabled {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.1);
+}
+
 .card__button {
   padding: 8px 26px;
+}
+
+.card__button:hover {
+  background-color: #615048;
+}
+
+.card__button:focus {
+  background-color: #615048;
+}
+
+.card__button:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.card__button:disabled {
+  background-color: #E5E5E5;
+  color: #FFFFFF;
 }
 
 .card__button__blue {
@@ -104,10 +192,46 @@ body {
   padding: 8px 20px;
 }
 
+.card__button__blue:hover {
+  background-color: #68A2CA;
+}
+
+.card__button__blue:focus {
+  background-color: #68A2CA;
+}
+
+.card__button__blue:active {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.card__button__blue:disabled {
+  background-color: #E5E5E5;
+  color: #FFFFFF;
+}
+
 .card__button__current {
   background-color: #7DB54F;
 
   padding: 8px 18px;
+}
+
+.card__button__current:hover {
+  background-color: #6C9E42;
+}
+
+.card__button__current:focus {
+  background-color: #6C9E42;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.card__button__current:active {
+  background-color: #7DB54F;
+}
+
+.card__button__current:disabled {
+  background-color: #E5E5E5;
+  color: #FFFFFF;
 }
 
 /* Основные контейнеры */
@@ -174,21 +298,15 @@ body {
   position: relative;
 }
 
-/* Был вопрос: как правильно отцентровать иконки. Сначала сделала так.
-Но мне не понравилось, так как область нажатия была неполной. */
-
-/* .navigation__user .navigation__item {
-  align-self: center;
-} */
-
-/* .navigation__user .navigation__link {
-  min-width: 44px;
-
-  padding: 22px 12px;
-  box-sizing: border-box;
-} */
-
-/* Потом переделала на такой вариант: */
+.navigation__link__current::before {
+  position: absolute;
+  content: "";
+  right: 16px;
+  bottom: 0;
+  left: 16px;
+  height: 2px;
+  background-color: #756257;
+}
 
 .navigation__user .navigation__link__icon {
   min-width: 44px;
@@ -215,6 +333,24 @@ body {
   margin-top: 14px;
   margin-bottom: 14px;
   margin-left: 20px;
+}
+
+.button__link:hover {
+  background-color: #615048;
+}
+
+.button__link:focus {
+  background-color: #615048;
+}
+
+.button__link:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button__link:disabled {
+  background-color: #E5E5E5;
+  color: #FFFFFF;
 }
 
 /* Главная часть - main */
@@ -477,6 +613,47 @@ body {
   width: 475px;
 }
 
+.subscription__form {
+  display: flex;
+}
+
+.subscription__field {
+  width: 452px;
+  margin: 0;
+  padding: 14px 345px 14px 20px;
+  box-sizing: border-box;
+
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+
+
+  background-color: #F2F2F2;
+  color: #000000;
+
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.subscription__field::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.subscription__field:hover {
+  background-color: #E6E6E6;
+}
+
+.subscription__field:focus {
+  background-color: #E6E6E6;
+  border: 3px solid #83B3D3;
+}
+
+.subscription__field:active {
+  background-color: #F2F2F2;
+  border: 2px solid #000000;
+}
+
 /* Подвал сайта */
 
 .page-footer {
@@ -490,6 +667,9 @@ body {
 
 .social {
   max-width: 145px;
+
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .social__list {
@@ -502,31 +682,47 @@ body {
   flex-wrap: wrap;
 }
 
-.social__link {
+.social__item {
   min-width: 48px;
   min-height: 40px;
 
-  display: block;
-  background-color: #ffffff;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 25px 15px;
+  padding: 13px 12px;
+
+  box-sizing: border-box;
 }
 
 .social__link__vk {
-  background-image: url("../images/footer/vk-icon_footer.svg");
+  width: 24px;
+  height: 14px;
+
 }
 
 .social__link__tme {
-  background-image: url("../images/footer/telegram-icon_footer.svg");
+  width: 18px;
+  height: 16px;
 }
 
 .social__link__youtube {
-  background-image: url("../images/footer/youtube-icon_footer.svg");
+  width: 22px;
+  height: 17px;
+}
+
+.social__icon {
+  fill: #83B3D3;
+}
+
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
+  fill: #68A2CA;
+}
+
+.social__link:active .social__icon {
+  fill: #68A2CA;
+  opacity: 30%;
 }
 
 .contacts {
-  margin: 0 auto;
+  margin: 5px auto 5px auto;
 }
 
 .contacts__phone {
@@ -537,8 +733,37 @@ body {
   text-decoration: none;
 }
 
+.contacts__phone:hover {
+  color: #756157;
+}
+
+.contacts__phone:focus {
+  color: #756157;
+}
+
+.contacts__phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .copyright {
   width: 115px;
+
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.copyright__icon {
+  fill: #000000;
+}
+
+.copyright__link:hover .copyright__icon,
+.copyright__link:focus .copyright__icon {
+  fill: #756157;
+}
+
+.copyright__link:active .copyright__icon {
+  fill: #756157;
+  opacity: 30%;
 }
 
 /* Страница каталога */
@@ -594,6 +819,18 @@ body {
   font-weight: 400;
   text-decoration: none;
   color: inherit;
+}
+
+.breadcrumbs__link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs__link:focus {
+  color: #FFFFFF;
+}
+
+.breadcrumbs__link:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .homepage-icon__link {
@@ -755,11 +992,6 @@ input.price {
   justify-content: space-between;
 }
 
-/* .view-type__link {
-  min-width: 48px;
-  min-height: 48px;
-} */
-
 /* Каталог с карточками гостиниц */
 
 .catalog-list {
@@ -901,6 +1133,20 @@ input.price {
   align-items: center;
 }
 
+.pagination__item:hover {
+  background-color: #68A2CA;
+}
+
+.pagination__item:focus {
+  background-color: #68A2CA;
+}
+
+.pagination__item:active {
+  background-color: #82B3D3;
+  color:  rgba(255, 255, 255, 0.3);
+
+}
+
 .pagination__current {
   color: #000000;
   background-color: #F2F2F2;
@@ -924,7 +1170,6 @@ input.price {
   padding-top: 11px;
   box-sizing: border-box;
 }
-/* Хорошо ли получилось сделать ссылки в пагинации? Моя цель - большая область нажатия */
 
 /* Подписка в каталоге */
 
