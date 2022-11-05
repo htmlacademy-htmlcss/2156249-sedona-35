@@ -620,7 +620,7 @@ body {
 .subscription__field {
   width: 452px;
   margin: 0;
-  padding: 14px 345px 14px 20px;
+  padding: 14px 20px 14px 20px;
   box-sizing: border-box;
 
   font-family: inherit;
@@ -645,8 +645,11 @@ body {
 }
 
 .subscription__field:focus {
+  height: 52px;
   background-color: #E6E6E6;
   border: 3px solid #83B3D3;
+  border-right-style: none;
+  padding: 11px 17px 11px 17px;
 }
 
 .subscription__field:active {
