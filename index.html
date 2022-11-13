@@ -187,7 +187,7 @@
 
   <div class="modal__container modal__container__close">
     <div class="modal modal__search">
-        <button class="modal__close-button">
+        <button class="modal__close-button" type="button">
             <span class="visually-hidden">Закрыть</span>
         </button>
         <section class="modal__content">
@@ -200,26 +200,30 @@
 
             <label class="modal__label" for="check-out-date">Дата Заезда:</label>
             <input class="modal__input check-out__input" id="check-out-date" type="text" placeholder="1 сентября 2023">
-
-            <svg class="modal__date-icon__check-out" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><g fill="#000" opacity=".3"><path d="M7.75 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Z"/><path d="M17 4h-2V2h-1v2H6V2H5v2H3c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V5c0-.6-.5-1-1-1Zm0 12H3V9h14v7ZM3 8V5h2v2h1V5h8v2h1V5h2v3H3Z"/><path d="M10 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM12.25 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM7.75 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM5.5 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM5.5 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM10 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM12.25 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM14.5 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM14.5 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z"/></g></svg><span class="modal__extra-information__positive">На эти даты есть свободные номера. Пока есть.</span>
+            <svg class="modal__date-icon__check-out" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><g fill="#000" opacity=".3"><path d="M7.75 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Z"/><path d="M17 4h-2V2h-1v2H6V2H5v2H3c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V5c0-.6-.5-1-1-1Zm0 12H3V9h14v7ZM3 8V5h2v2h1V5h8v2h1V5h2v3H3Z"/><path d="M10 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM12.25 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM7.75 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM5.5 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM5.5 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM10 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM12.25 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM14.5 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM14.5 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z"/></g></svg>
+            <span class="modal__extra-information__positive">На эти даты есть свободные номера. Пока есть.</span>
 
             <label class="modal__label" for="adults">Взрослые:</label>
             <input class="adults__input" id="adults" type="text">
             <svg class="modal__button-minus" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#756157" fill-opacity=".3" d="M3 9v2h14V9H3Z"/></svg>
             <svg class="modal__button-plus" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#756157" fill-opacity=".3" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/></svg>
 
-            <label class="modal__label modal__label__children" for="children">Дети:</label>
-            <span class="modal__info">!</span>
-            <span class="modal__info-text">Укажите количество детей,<br>
-              которые будут с вами, возраст<br>
-              которых от 6 до 18 лет. Дети<br>
-              до 6 лет размещаются<br>
-              бесплатно.</span>
+            <span class="modal__label">
+            <label class="modal__label__children" for="children">Дети:</label>
+            <span class="tooltip">
+              <button class="tooltip__toggle" type="button" aria-labelledby="tooltip__info">!</button>
+              <span class="tooltip__text" role="tooltip" id="tooltip__info">Укажите количество детей,<br>
+                которые будут с вами, возраст<br>
+                которых от 6 до 18 лет. Дети<br>
+                до 6 лет размещаются<br>
+                бесплатно.</span>
+            </span>
+            </span>
             <input class="children__input" id="children" type="text">
             <svg class="modal__button-minus__children" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#756157" fill-opacity=".3" d="M3 9v2h14V9H3Z"/></svg>
             <svg class="modal__button-plus__children" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#756157" fill-opacity=".3" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/></svg>
 
-            <button class="button modal__search-button">Найти</button>
+            <button class="button modal__search-button" type="button">Найти</button>
           </form>
         </section>
     </div>

@@ -914,8 +914,8 @@ body {
 
 .modal__form {
   display: grid;
-  grid-template-columns: 120px 110px 180px 110px;
-  column-gap: 20px;
+  grid-template-columns: 120px 110px 183px 110px;
+  column-gap: 18px;
   row-gap: 48px;
 
 
@@ -934,27 +934,42 @@ body {
 
 .modal__label__children {
   margin-left: 70px;
+
+  position: relative;
 }
 
-.modal__info {
+.tooltip {
   position: absolute;
-  right: 145px;
-  top: 200px;
+  margin-left: 10px;
+
+  width: 26px;
+  height: 26px;
+
+}
+
+.tooltip__toggle {
+  display: block;
 
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  padding: 3px;
+  padding: 0;
+  margin: 0;
 
-  background-color: #83B3D3;
+  background-color: #68A2CA;
   color: #ffffff;
+  border: none;
 
   text-align: center;
 
   transform: rotate(180deg);
 }
 
-.modal__info-text {
+.tooltip__toggle:hover {
+  background-color: #83B3D3;
+}
+
+.tooltip__text {
   font-family: inherit;
   font-weight: 400;
   font-size: 16px;
@@ -963,19 +978,29 @@ body {
   background-color: #333333;
   color: #ffffff;
 
+  width: 256px;
+  box-sizing: border-box;
+
   padding: 15px 18px 18px 22px;
   margin: 0;
   border-radius: 10px;
 
   position: absolute;
-  top: 242px;
-  right: 48px;
+  top: 42px;
+  right: -112px;
+
+  display: none;
 }
 
-.modal__info-text::before {
+.tooltip__toggle:hover + .tooltip__text,
+.tooltip__toggle:focus + .tooltip__text {
+  display: block;
+}
+
+.tooltip__text::before {
   position: absolute;
   top: -10px;
-  right: 100px;
+  right: 113px;
   content: "";
   width: 0;
   height: 0;
